@@ -1,3 +1,4 @@
 Samples/matrixMul/matrixMul
 Samples/matrixMul/matrixMul.o
 bin/
+*.swp
