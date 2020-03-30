@@ -50,6 +50,8 @@
 #include <helper_functions.h>
 #include <helper_cuda.h>
 
+#include <bemps/bemps.hpp>
+
 /**
  * Matrix multiplication (CUDA Kernel) on the device: C = A * B
  * wA is A's width and wB is B's width
@@ -292,6 +294,8 @@ int MatrixMultiply(int argc, char **argv,
  */
 int main(int argc, char **argv) {
   printf("[Matrix Multiply Using CUDA] - Starting...\n");
+
+  bemps_beacon(42);
 
   if (checkCmdLineFlag(argc, (const char **)argv, "help") ||
       checkCmdLineFlag(argc, (const char **)argv, "?")) {
